@@ -13,6 +13,7 @@ const CameraComponent = ({ onCapture }) => {
   const captureFrame = async () => {
     const imageSrc = webcamRef.current.getScreenshot();
     await onCapture(imageSrc);
+    setCameraOn(false);
   };
 
   return (
@@ -22,7 +23,7 @@ const CameraComponent = ({ onCapture }) => {
       </button>
       {cameraOn && (
         <div >
-          <Webcam audio={false} ref={webcamRef}  style={{width:"400px", height:"400px" }} />
+          <Webcam audio={false} ref={webcamRef}  style={{width:"400px", height:"400px" ,position:'fixed',left:'35%',top:'20%'}} />
           <button className="selectfile positions" style={{top:'50%'}} onClick={captureFrame}>Capture</button>
         </div>
       )}
