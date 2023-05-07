@@ -42,9 +42,10 @@ input:focus + label {
 }
 .positions
 {
-   width: 100px ;
-   height: 40px;
+   width: 10% ;
+   height: 7%;
     position: fixed;
+    font-size:0.7rem;
      
       right: 10%;
 }
