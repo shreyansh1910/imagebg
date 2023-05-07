@@ -48,3 +48,8 @@ input:focus + label {
      
       right: 10%;
 }
+.resize{
+  max-width:50%;
+  height: 50%;
+}
+

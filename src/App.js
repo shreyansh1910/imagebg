@@ -124,23 +124,22 @@ function App() {
   }
   <input style={{ width: '100px', height: '40px', position: 'absolute', top: '20%', left: '30%' }} type="file" accept="image/*" onChange={(e) => setImage(e.target.files[0])}></input>
   return (
-    <div >
-      <h1 style={{ textAlign: 'center' }}>
+    <div style={{ overflow:'hidden'}}>
+      <h1 style={{ textAlign: 'center'}}>
         Background remover
       </h1>
       <div>
 
         <button className="selectfile positions" style={{top:'30%'}} onClick={handleupload}>Show photo</button>
         <CameraComponent onCapture={handleImageCapture} />
-        <input id="file"  style={{opacity:'0'}}  type="file" accept="image/*" onChange={(e) => setImage(e.target.files[0])}></input>
-        <label  className="selectfile positions"  for="file">
+        <input id="file"  style={{opacity:'0'}}  type="file" accept="image/*" onChange={(e) => {setImage(e.target.files[0]);setBgremove(null);}}></input>
+        <label  className="selectfile positions" style={{top:'20%'}} for="file">
           Select file
-          
         </label>
 
 
 
-        <div style={{ position: 'fixed', top: '10%', left: '30%' }}>{bgremove && <img width="500px" height="500px" src={bgremove} alt="bgremove" />}</div>
+        <div style={{position:'relative',top:'40%',left:'30%'}}>{bgremove && <img className='resize' src={bgremove} alt="bgremove" />}</div>
 
       </div>
     </div>
