@@ -9,7 +9,7 @@ const [bgremove, setBgremove] = useState(null);
 
 
 const handleupload = () => {
-  const apikey = '1bNtgP9RRgGMg8EeQmdHBo7L'
+  const apikey = 'PxE8nyMKGjvDuBjJeWXcJMqm'
   const url = 'https://api.remove.bg/v1.0/removebg'
   const formData = new FormData();
   formData.append('image_file', image, image.name);
