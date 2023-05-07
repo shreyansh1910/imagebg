@@ -128,14 +128,15 @@ function App() {
       <h1 style={{ textAlign: 'center'}}>
         Background remover
       </h1>
-      <div>
-
+      <div >
+       <div style={{display:'flex'}}>
         <button className="selectfile positions" style={{top:'10%',left:'45%'}} onClick={handleupload}>Show photo</button>
         <CameraComponent onCapture={handleImageCapture} />
         <input id="file"  style={{opacity:'0'}}  type="file" accept="image/*" onChange={(e) => {setImage(e.target.files[0]);setBgremove(null);}}></input>
         <label  className="selectfile positions" style={{top:'10%',left:'10%'}} for="file">
           Select file
         </label>
+        </div>
 
 
 
