@@ -31,10 +31,10 @@ const handleupload = () => {
       <h1 style={{textAlign:'center'}}>
          Background remover
       </h1>
-      <div style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
-      <input type="file" onChange={ (e) => setImage(e.target.files[0])}></input>
-      <button onClick={handleupload}>upload image</button>
-      <div>{bgremove && <img width="500px" height="500px" src={bgremove} alt="bgremove" />}</div>
+      <div style={{float:'left', justifyContent:'center', alignItems:'center'}}>
+      <input  style={{width:'100px', height:'40px' ,position:'absolute', top:'20%', left:'30%'} } type="file" onChange={ (e) => setImage(e.target.files[0])}></input>
+      <button style={{width:'100px', height:'20px', position:'absolute', top:'20%', left:'60%'} } onClick={handleupload}>upload image</button>
+      <div style={{ position:'absolute', top:'10%', left:'30%'}}>{bgremove && <img width="500px" height="500px"  src={bgremove} alt="bgremove" />}</div>
       </div>
     </div>
     
