@@ -18,13 +18,13 @@ const CameraComponent = ({ onCapture }) => {
 
   return (
     <div>
-      <button  className="selectfile positions" style={{top:'40%'}} onClick={toggleCamera}>
+      <button  className="selectfile positions" style={{top:'10%' ,right:'10%'}} onClick={toggleCamera}>
         {cameraOn ? 'Turn off camera' : 'Turn on camera'}
       </button>
       {cameraOn && (
         <div >
-          <Webcam audio={false} ref={webcamRef}  style={{width:"400px", height:"400px" ,position:'fixed',left:'35%',top:'20%'}} />
-          <button className="selectfile positions" style={{top:'50%'}} onClick={captureFrame}>Capture</button>
+          <Webcam audio={false} ref={webcamRef}  style={{width:"300px", height:"300px" ,position:'relative',left:'35%',top:'20%'}} />
+          <button className="selectfile positions" style={{bottom:'10%',left:'45%' ,position:'fixed'}} onClick={captureFrame}>Capture</button>
         </div>
       )}
     </div>
