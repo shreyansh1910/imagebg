@@ -51,7 +51,7 @@ function App() {
       .then(jpegBase64 => {
         // Use the converted JPEG base64 data as needed (e.g., send it to the Remove.bg API)
         setImage(jpegBase64);
-        const apikey = 'PxE8nyMKGjvDuBjJeWXcJMqm'
+        const apikey = 'p1KTsKA1tdqgANVXFVtNXKXA'
         fetch('https://api.remove.bg/v1.0/removebg', {
           method: 'POST',
           headers: {
@@ -91,7 +91,7 @@ function App() {
 
 
   const handleupload = () => {
-    const apikey = 'PxE8nyMKGjvDuBjJeWXcJMqm'
+    const apikey = 'p1KTsKA1tdqgANVXFVtNXKXA'
     const url = 'https://api.remove.bg/v1.0/removebg'
 
     const selectedFile = image;
